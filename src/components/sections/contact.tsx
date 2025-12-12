@@ -2,14 +2,13 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Send, Github, Linkedin } from "lucide-react";
 import { siteConfig, socialLinks } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 const socialIcons = [
   { icon: Github, href: socialLinks.github, label: "GitHub" },
   { icon: Linkedin, href: socialLinks.linkedin, label: "LinkedIn" },
-  { icon: Twitter, href: socialLinks.twitter, label: "Twitter" },
 ];
 
 export function Contact() {

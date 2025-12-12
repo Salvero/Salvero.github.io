@@ -2,12 +2,12 @@
 
 export const siteConfig = {
   name: "Salman",
-  title: "Full-Stack Engineer Building Modern Web Systems & Data-Driven Solutions.",
+  title: "Full-Stack & AI Engineer Building Intelligent Systems",
   description:
     "Focused on building secure, maintainable full-stack solutions and ensuring system stability through deep troubleshooting expertise.",
   url: "https://salman.dev",
   email: "salmandev15@gmail.co",
-  location: "Niagara Falls, ON",
+  location: "",
   availability: "Open to opportunities",
 };
 
@@ -121,6 +121,10 @@ export const projects = [
       "Keyboard-first UX (N: notes, M: AI)",
       "Room-based collaboration with instant state sync",
     ],
+    metrics: [
+      { value: "< 50ms", label: "Sync Latency" },
+      { value: "99.9%", label: "Uptime" },
+    ],
   },
   {
     title: "AppointHub",
@@ -138,6 +142,10 @@ export const projects = [
       "Real-time analytics dashboard with revenue tracking",
       "Automated email & SMS appointment reminders",
       "Multi-location & staff availability management",
+    ],
+    metrics: [
+      { value: "2,500+", label: "Bookings" },
+      { value: "98%", label: "Satisfaction" },
     ],
   },
   {
@@ -157,6 +165,10 @@ export const projects = [
       "WCAG 2.1 AA accessibility compliant",
       "Production security headers (HSTS, CSP)",
     ],
+    metrics: [
+      { value: "95", label: "Lighthouse" },
+      { value: "AA", label: "WCAG" },
+    ],
   },
   {
     title: "EcoPulse Dashboard",
@@ -174,6 +186,10 @@ export const projects = [
       "Multi-station global monitoring (4 cities)",
       "Timezone-intelligent data normalization",
       "Resilient API layer with graceful fallback",
+    ],
+    metrics: [
+      { value: "94%", label: "Accuracy" },
+      { value: "< 150ms", label: "Latency" },
     ],
   },
 ];

@@ -11,20 +11,35 @@ export default function Icon() {
     (
       <div
         style={{
-          fontSize: 24,
-          background: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+          background: "#0a0a1a",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          borderRadius: "8px",
-          color: "white",
-          fontWeight: 700,
+          borderRadius: "6px",
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        S
+        <span
+          style={{
+            fontSize: 14,
+            fontWeight: 800,
+            color: "white",
+            letterSpacing: "-0.5px",
+          }}
+        >
+          SA
+        </span>
+        <span
+          style={{
+            fontSize: 14,
+            fontWeight: 800,
+            color: "#22d3ee",
+          }}
+        >
+          _
+        </span>
       </div>
     ),
     {

@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salman Portfolio 2026
 
-## Getting Started
+A modern, space-themed portfolio website built with Next.js 16, React 19, and ShadCN UI.
 
-First, run the development server:
+## ✅ Completed Features
+
+### Design System
+- [x] **Space Theme** - Dark galaxy background with animated stars
+- [x] **Twinkling Stars** - Multiple layers of animated star patterns
+- [x] **Shooting Stars** - Animated diagonal lines near code section
+- [x] **Glowing Orb** - Pulsing cyan orb at top center
+- [x] **Purple Glow** - Ambient purple glow on right side
+
+### Components
+- [x] **Header** - SA_ logo, pill-style navigation, mobile hamburger menu
+- [x] **Hero Section** - Welcome badge, gradient text headline, terminal code card
+- [x] **Projects Section** - Bento grid layout with ShadCN Card/Badge components
+- [x] **Mobile Menu** - Slide-in sheet with proper close button
+
+### Polish
+- [x] **Favicon** - SA_ logo as favicon
+- [x] **Mobile Responsive** - Proper line breaks, hamburger menu, close button
+- [x] **Animations** - Framer Motion throughout
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **UI Library**: React 19
+- **Styling**: Tailwind CSS v4
+- **Components**: ShadCN UI
+- **Animations**: Framer Motion
+- **Fonts**: Inter, JetBrains Mono
+
+## 🚀 Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📋 Next Steps
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [PRD.md](./PRD.md) for planned features and improvements.
