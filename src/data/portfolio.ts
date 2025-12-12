@@ -47,6 +47,7 @@ export const experiences = [
     role: "Technical Support Engineer",
     period: "November 2023 - Present",
     location: "Vancouver, BC",
+    logo: "/companies/pagefreezer.png",
     description:
       "Providing technical support for enterprise web archiving and compliance solutions. Debugging complex issues across cloud infrastructure and helping customers implement best practices.",
     highlights: [
@@ -60,6 +61,7 @@ export const experiences = [
     role: "Technical Support Analyst",
     period: "February 2023 - November 2023",
     location: "Toronto, ON",
+    logo: "/companies/docebo.png",
     description:
       "Supported enterprise LMS platform customers with technical issues, integrations, and API implementations.",
     highlights: [
@@ -73,6 +75,7 @@ export const experiences = [
     role: "Technical Support Engineer",
     period: "May 2020 - July 2022",
     location: "Victoria, BC",
+    logo: "/companies/pixelunion.png",
     description:
       "Provided expert support for premium Shopify themes. Deep expertise in e-commerce, Liquid templating, and frontend customization.",
     highlights: [
@@ -86,6 +89,7 @@ export const experiences = [
     role: "Intermediate Web Developer",
     period: "May 2016 - May 2020",
     location: "Ottawa, ON",
+    logo: "/companies/outofthesandbox.png",
     description:
       "Developed and maintained premium Shopify themes. Built custom features and optimized theme performance for e-commerce merchants.",
     highlights: [

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { experiences } from "@/data/portfolio";
 
 export function Experience() {
@@ -34,18 +35,36 @@ export function Experience() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="py-6 border-b border-border last:border-b-0"
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
-                <div>
-                  <h3 className="heading-md">{exp.company}</h3>
-                  <p className="text-muted-foreground">{exp.role}</p>
+              <div className="flex items-start gap-4">
+                {/* Company Logo */}
+                {exp.logo && (
+                  <div className="shrink-0 w-12 h-12 rounded-lg overflow-hidden bg-muted/50 flex items-center justify-center p-2">
+                    <Image
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      width={48}
+                      height={48}
+                      className="object-contain w-full h-full"
+                    />
+                  </div>
+                )}
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
+                    <div>
+                      <h3 className="heading-md">{exp.company}</h3>
+                      <p className="text-muted-foreground">{exp.role}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground font-mono shrink-0">
+                      {exp.period}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    {exp.description}
+                  </p>
                 </div>
-                <span className="text-sm text-muted-foreground font-mono shrink-0">
-                  {exp.period}
-                </span>
               </div>
-              <p className="text-sm text-muted-foreground mt-2">
-                {exp.description}
-              </p>
             </motion.div>
           ))}
         </div>

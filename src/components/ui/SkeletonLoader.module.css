@@ -1,0 +1,232 @@
+/* SkeletonLoader Component - BEM Methodology */
+
+/* Block: skeleton */
+.skeleton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Shimmer animation keyframes */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Base skeleton element styling */
+.skeleton__element {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg,
+            var(--muted) 0%,
+            oklch(0.72 0.17 175 / 10%) 50%,
+            var(--muted) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite ease-in-out, pulse 2s infinite ease-in-out;
+}
+
+/* Element: line (text placeholder) */
+.skeleton__line {
+    height: 1rem;
+    width: 100%;
+}
+
+.skeleton__line--small {
+    height: 0.75rem;
+    width: 60%;
+}
+
+.skeleton__line--medium {
+    height: 1rem;
+    width: 80%;
+}
+
+.skeleton__line--large {
+    height: 1.25rem;
+    width: 100%;
+}
+
+.skeleton__line--full {
+    height: 1rem;
+    width: 100%;
+}
+
+/* Element: title (heading placeholder) */
+.skeleton__title {
+    height: 2rem;
+    width: 50%;
+}
+
+.skeleton__title--large {
+    height: 3rem;
+    width: 60%;
+}
+
+.skeleton__title--small {
+    height: 1.5rem;
+    width: 40%;
+}
+
+/* Element: badge (tag/badge placeholder) */
+.skeleton__badge {
+    height: 1.5rem;
+    width: 5rem;
+    border-radius: 9999px;
+}
+
+/* Element: avatar (profile image placeholder) */
+.skeleton__avatar {
+    border-radius: 50%;
+}
+
+.skeleton__avatar--small {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.skeleton__avatar--medium {
+    width: 4rem;
+    height: 4rem;
+}
+
+.skeleton__avatar--large {
+    width: 6rem;
+    height: 6rem;
+}
+
+/* Element: card (content card placeholder) */
+.skeleton__card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Element: image (thumbnail placeholder) */
+.skeleton__image {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+
+.skeleton__image--square {
+    aspect-ratio: 1 / 1;
+}
+
+.skeleton__image--portrait {
+    aspect-ratio: 3 / 4;
+}
+
+/* Element: button (CTA placeholder) */
+.skeleton__button {
+    height: 2.75rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+}
+
+.skeleton__button--full {
+    width: 100%;
+}
+
+/* Element: row (horizontal group) */
+.skeleton__row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skeleton__row--between {
+    justify-content: space-between;
+}
+
+/* Element: group (stacked text lines) */
+.skeleton__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Element: grid (card grid placeholder) */
+.skeleton__grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skeleton__grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.skeleton__grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+
+    .skeleton__grid--2,
+    .skeleton__grid--3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modifier: no-animation (for reduced motion preference) */
+@media (prefers-reduced-motion: reduce) {
+    .skeleton__element {
+        animation: none;
+        opacity: 0.5;
+    }
+}
+
+/* Preset: Hero skeleton */
+.skeleton--hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+/* Preset: Projects skeleton */
+.skeleton--projects {
+    padding: 4rem 0;
+}
+
+/* Preset: Skills skeleton */
+.skeleton--skills {
+    padding: 4rem 0;
+}
+
+/* Dark mode adjustments */
+:global(.dark) .skeleton__element {
+    background: linear-gradient(90deg,
+            oklch(0.18 0.02 245) 0%,
+            oklch(0.72 0.17 175 / 15%) 50%,
+            oklch(0.18 0.02 245) 100%);
+    background-size: 200% 100%;
+}
+
+:global(.dark) .skeleton__card {
+    background: oklch(0.16 0.025 245 / 60%);
+    border-color: oklch(0.98 0 0 / 8%);
+}
