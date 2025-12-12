@@ -4,9 +4,13 @@ const nextConfig: NextConfig = {
   // Static export for GitHub Pages
   output: "export",
 
-  // Base path for GitHub Pages (username.github.io)
-  // Leave empty for root domain
+  // Base path for GitHub Pages
+  // For username.github.io (user site) - leave empty
+  // For username.github.io/repo-name (project site) - set to "/repo-name"
   basePath: "",
+
+  // Asset prefix (same as basePath for GitHub Pages)
+  assetPrefix: "",
 
   // Disable image optimization for static export
   images: {
