@@ -136,7 +136,7 @@ export function Contact() {
   }, [formState]);
 
   /**
-   * Handle form submission with validation and error handling
+   * Handle form submission with validation and Formspree integration
    */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -157,17 +157,24 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - replace with actual form handler
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          // Simulate 90% success rate for demo
-          if (Math.random() > 0.1) {
-            resolve(true);
-          } else {
-            reject(new Error("Network error"));
-          }
-        }, 1500);
+      // Send to Formspree
+      const response = await fetch("https://formspree.io/f/xqarwwjv", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        }),
       });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
+      }
 
       // Success
       setSubmitStatus("success");
