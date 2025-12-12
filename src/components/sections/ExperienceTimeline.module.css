@@ -287,3 +287,47 @@
         transform: none;
     }
 }
+
+/* Light mode - darker accent colors for readability */
+:root .timeline__role {
+    color: oklch(0.45 0.15 175);
+}
+
+:root .timeline__impact::before {
+    background: oklch(0.45 0.15 175);
+}
+
+:root .timeline__item:hover .timeline__marker {
+    border-color: oklch(0.45 0.15 175);
+    box-shadow: 0 0 20px oklch(0.45 0.15 175 / 40%);
+}
+
+:root .timeline__item:hover .timeline__marker::after {
+    background: oklch(0.45 0.15 175);
+}
+
+:root .timeline__marker--current {
+    border-color: oklch(0.45 0.15 175);
+}
+
+:root .timeline__marker--current::after {
+    background: oklch(0.45 0.15 175);
+}
+
+:root .timeline__item:hover .timeline__tag {
+    background: oklch(0.45 0.15 175 / 15%);
+    color: oklch(0.45 0.15 175);
+}
+
+:root .timeline__item:hover .timeline__content {
+    border-color: oklch(0.45 0.15 175 / 30%);
+    box-shadow: 0 10px 40px oklch(0.45 0.15 175 / 10%);
+}
+
+:root .timeline__track {
+    background: linear-gradient(to bottom,
+            oklch(0.45 0.15 175 / 30%),
+            var(--border) 20%,
+            var(--border) 80%,
+            oklch(0.45 0.15 175 / 30%));
+}

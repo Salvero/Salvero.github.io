@@ -138,3 +138,43 @@
         transform: none;
     }
 }
+
+/* Light mode - darker accent colors for readability */
+:root .skills__category-icon {
+    background: oklch(0.45 0.15 175 / 15%);
+    color: oklch(0.45 0.15 175);
+}
+
+:root .skills__tag:hover {
+    background: oklch(0.45 0.15 175 / 20%);
+    color: oklch(0.45 0.15 175);
+}
+
+:root .skills__tag--accent {
+    background: oklch(0.45 0.15 175 / 15%);
+    color: oklch(0.45 0.15 175);
+}
+
+:root .skills__category:hover {
+    border-color: oklch(0.45 0.15 175 / 30%);
+}
+
+/* Dark mode - keep original light teal */
+:global(.dark) .skills__category-icon {
+    background: oklch(0.72 0.17 175 / 15%);
+    color: oklch(0.72 0.17 175);
+}
+
+:global(.dark) .skills__tag:hover {
+    background: oklch(0.72 0.17 175 / 20%);
+    color: oklch(0.72 0.17 175);
+}
+
+:global(.dark) .skills__tag--accent {
+    background: oklch(0.72 0.17 175 / 15%);
+    color: oklch(0.72 0.17 175);
+}
+
+:global(.dark) .skills__category:hover {
+    border-color: oklch(0.72 0.17 175 / 30%);
+}

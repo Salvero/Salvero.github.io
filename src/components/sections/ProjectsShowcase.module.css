@@ -289,3 +289,41 @@
         transform: none;
     }
 }
+
+/* Light mode - darker accent colors for readability */
+:global(:root) .project-card__tag {
+    background: oklch(0.45 0.15 175 / 15%);
+    color: oklch(0.45 0.15 175);
+}
+
+:global(:root) .project-card:hover .project-card__tag {
+    background: oklch(0.45 0.15 175 / 25%);
+}
+
+:global(:root) .project-card__metric-value {
+    color: oklch(0.45 0.15 175);
+}
+
+:global(:root) .project-card__highlight::before {
+    background: oklch(0.45 0.15 175);
+}
+
+:global(:root) .project-card__btn--secondary:hover {
+    border-color: oklch(0.45 0.15 175);
+    color: oklch(0.45 0.15 175);
+    background: oklch(0.45 0.15 175 / 10%);
+}
+
+:global(:root) .project-card:hover {
+    box-shadow:
+        0 20px 60px oklch(0.45 0.15 175 / 15%),
+        0 8px 20px oklch(0 0 0 / 10%);
+}
+
+:global(:root) .project-card__btn--primary {
+    background: linear-gradient(135deg, oklch(0.45 0.15 175), oklch(0.40 0.16 162));
+}
+
+:global(:root) .project-card__btn--primary:hover {
+    box-shadow: 0 8px 25px oklch(0.45 0.15 175 / 40%);
+}

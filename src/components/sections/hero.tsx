@@ -115,19 +115,19 @@ export function Hero() {
                 {/* Code content */}
                 <pre className="font-mono text-sm">
                   <code>
-                    <span className="text-teal-400">const</span>{" "}
-                    <span className="text-emerald-400">developer</span>{" "}
+                    <span className="text-blue-600 dark:text-teal-400">const</span>{" "}
+                    <span className="text-purple-600 dark:text-emerald-400">developer</span>{" "}
                     <span className="text-foreground">=</span> {"{"}
-                    {"\n"}  <span className="text-gray-400">name:</span>{" "}
-                    <span className="text-green-400">"Salman"</span>,
-                    {"\n"}  <span className="text-gray-400">skills:</span> [
-                    {"\n"}    <span className="text-green-400">"React"</span>,
-                    {"\n"}    <span className="text-green-400">"Next.js"</span>,
-                    {"\n"}    <span className="text-green-400">"Python"</span>,
-                    {"\n"}    <span className="text-green-400">"AI/ML"</span>
+                    {"\n"}  <span className="text-gray-600 dark:text-gray-400">name:</span>{" "}
+                    <span className="text-orange-600 dark:text-green-400">"Salman"</span>,
+                    {"\n"}  <span className="text-gray-600 dark:text-gray-400">skills:</span> [
+                    {"\n"}    <span className="text-orange-600 dark:text-green-400">"React"</span>,
+                    {"\n"}    <span className="text-orange-600 dark:text-green-400">"Next.js"</span>,
+                    {"\n"}    <span className="text-orange-600 dark:text-green-400">"Python"</span>,
+                    {"\n"}    <span className="text-orange-600 dark:text-green-400">"AI/ML"</span>
                     {"\n"}  ],
-                    {"\n"}  <span className="text-gray-400">passion:</span>{" "}
-                    <span className="text-green-400">"Building cool stuff"</span>
+                    {"\n"}  <span className="text-gray-600 dark:text-gray-400">passion:</span>{" "}
+                    <span className="text-orange-600 dark:text-green-400">"Building cool stuff"</span>
                     {"\n"}{"}"}
                   </code>
                 </pre>
