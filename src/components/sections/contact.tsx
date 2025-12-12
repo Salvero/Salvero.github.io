@@ -369,9 +369,10 @@ export function Contact() {
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   className={cn(
                     "w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg",
-                    "bg-gradient-to-r from-primary to-secondary",
+                    "bg-teal-600 dark:bg-teal-500",
                     "text-white font-medium",
-                    "hover:shadow-lg hover:shadow-primary/25",
+                    "hover:bg-teal-700 dark:hover:bg-teal-400",
+                    "hover:shadow-lg hover:shadow-teal-600/25",
                     "disabled:opacity-50 disabled:cursor-not-allowed",
                     "transition-all duration-300"
                   )}

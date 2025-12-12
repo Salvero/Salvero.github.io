@@ -321,9 +321,11 @@
 }
 
 :global(:root) .project-card__btn--primary {
-    background: linear-gradient(135deg, oklch(0.45 0.15 175), oklch(0.40 0.16 162));
+    background: oklch(0.45 0.15 175);
+    color: white;
 }
 
 :global(:root) .project-card__btn--primary:hover {
+    background: oklch(0.40 0.15 175);
     box-shadow: 0 8px 25px oklch(0.45 0.15 175 / 40%);
 }
