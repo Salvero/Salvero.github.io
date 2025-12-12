@@ -1,7 +1,7 @@
 # Portfolio PRD - Next Phase
 
-## Overview
-Continue building the "Hired-on-Sight" portfolio with remaining sections and polish.
+> ⚠️ **Status: Under Construction**  
+> This portfolio is currently being renovated. Not ready for public viewing yet.
 
 ---
 
@@ -15,7 +15,6 @@ Continue building the "Hired-on-Sight" portfolio with remaining sections and pol
 - Role titles and duration
 - Key achievements with metrics
 - Tech stack badges for each role
-- Collapsible details (optional)
 
 ### 2. Projects Section Enhancement
 **Priority**: Medium
@@ -68,23 +67,22 @@ Continue building the "Hired-on-Sight" portfolio with remaining sections and pol
 
 - [ ] Touch-friendly interactions
 - [ ] Swipe gestures for projects
-- [ ] Bottom navigation option
 - [ ] Optimized images for mobile
 
 ---
 
 ## 🚀 Deployment
 
-### Pre-launch
+### Completed
+- [x] GitHub Pages deployment configured
+- [x] Repository: Salvero/Salvero.github.io
+
+### Pending
+- [ ] Custom domain setup (optional)
 - [ ] SEO meta tags
 - [ ] Open Graph images
 - [ ] Sitemap generation
 - [ ] Analytics setup (Google/Vercel)
-
-### Hosting
-- [ ] Deploy to Vercel
-- [ ] Custom domain setup
-- [ ] SSL certificate
 
 ---
 
@@ -104,6 +102,13 @@ Continue building the "Hired-on-Sight" portfolio with remaining sections and pol
 | Phase 2 | Experience + Contact sections | 2-3 hours |
 | Phase 3 | Skills + Projects enhancement | 2 hours |
 | Phase 4 | Polish + Animations | 1-2 hours |
-| Phase 5 | Deployment + SEO | 1 hour |
+| Phase 5 | SEO + Final Review | 1 hour |
 
 **Total**: ~6-8 hours remaining
+
+---
+
+## Notes
+
+- Portfolio will remain "under construction" until all core sections are complete
+- Final review before making public
