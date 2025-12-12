@@ -284,6 +284,15 @@ export function Contact() {
                 className="relative z-10 space-y-6"
                 noValidate
               >
+                {/* Honeypot field - hidden from users, catches bots */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className={formClasses.label}>
