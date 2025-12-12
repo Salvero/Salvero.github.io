@@ -1,0 +1,162 @@
+/* SocialLinks Component - BEM Methodology */
+
+/* Block: social-list */
+.social-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-list__items {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Element: item */
+.social-list__item {
+    margin: 0;
+}
+
+/* Element: link - Clean borderless design */
+.social-list__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--foreground);
+    opacity: 0.6;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Hover and focus states - Teal accent */
+.social-list__link:hover,
+.social-list__link:focus {
+    opacity: 1;
+    color: oklch(0.72 0.17 175);
+    /* Teal accent */
+    background-color: oklch(0.72 0.17 175 / 10%);
+    transform: translateY(-2px);
+}
+
+.social-list__link:focus {
+    outline: none;
+}
+
+.social-list__link:focus-visible {
+    outline: 2px solid oklch(0.72 0.17 175);
+    outline-offset: 2px;
+}
+
+/* Active/pressed state */
+.social-list__link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px oklch(0.72 0.17 175 / 15%);
+}
+
+/* Element: icon */
+.social-list__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list__link:hover .social-list__icon {
+    transform: scale(1.1);
+}
+
+/* Glow effect on hover */
+.social-list__link::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+            oklch(0.72 0.17 175 / 0%),
+            oklch(0.68 0.18 162 / 0%));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-list__link:hover::before {
+    background: linear-gradient(135deg,
+            oklch(0.72 0.17 175 / 15%),
+            oklch(0.68 0.18 162 / 10%));
+    opacity: 1;
+}
+
+/* Modifier: horizontal layout (default) */
+.social-list--horizontal .social-list__items {
+    flex-direction: row;
+}
+
+/* Modifier: vertical layout */
+.social-list--vertical .social-list__items {
+    flex-direction: column;
+}
+
+/* Modifier: compact size */
+.social-list--compact .social-list__link {
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+.social-list--compact .social-list__icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Modifier: large size */
+.social-list--large .social-list__link {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+.social-list--large .social-list__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Animation keyframes for entrance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social-list__item--animated {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.social-list__item--animated:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.social-list__item--animated:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.social-list__item--animated:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.social-list__item--animated:nth-child(4) {
+    animation-delay: 0.3s;
+}
