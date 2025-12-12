@@ -1,0 +1,182 @@
+/* MDX Content Styling - Custom theming for rendered Markdown */
+
+.mdx-content {
+    color: var(--foreground);
+    line-height: 1.8;
+    font-size: 1.0625rem;
+}
+
+/* Headings */
+.mdx-content h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: var(--foreground);
+    border-bottom: 2px solid oklch(0.72 0.17 175 / 30%);
+    padding-bottom: 0.5rem;
+}
+
+.mdx-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: var(--foreground);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.mdx-content h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 3px;
+    background: oklch(0.72 0.17 175);
+    border-radius: 2px;
+}
+
+.mdx-content h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: oklch(0.72 0.17 175);
+}
+
+.mdx-content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem;
+}
+
+/* Paragraphs */
+.mdx-content p {
+    margin: 1rem 0;
+    color: var(--muted-foreground);
+}
+
+/* Links */
+.mdx-content a {
+    color: oklch(0.72 0.17 175);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+}
+
+.mdx-content a:hover {
+    color: oklch(0.82 0.15 165);
+}
+
+/* Lists */
+.mdx-content ul,
+.mdx-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.mdx-content li {
+    margin: 0.5rem 0;
+    color: var(--muted-foreground);
+}
+
+.mdx-content li::marker {
+    color: oklch(0.72 0.17 175);
+}
+
+/* Bold and emphasis */
+.mdx-content strong {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.mdx-content em {
+    font-style: italic;
+}
+
+/* Blockquotes */
+.mdx-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid oklch(0.72 0.17 175);
+    background: oklch(0.72 0.17 175 / 10%);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.mdx-content blockquote p {
+    margin: 0;
+    font-style: italic;
+    color: var(--foreground);
+}
+
+/* Inline code */
+.mdx-content code:not(pre code) {
+    background: oklch(0.72 0.17 175 / 15%);
+    color: oklch(0.72 0.17 175);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+    font-family: var(--font-jetbrains-mono), monospace;
+}
+
+/* Code blocks */
+.mdx-content pre {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: oklch(0.12 0.03 245) !important;
+    border: 1px solid oklch(0.72 0.17 175 / 20%);
+    overflow-x: auto;
+}
+
+:global(.dark) .mdx-content pre {
+    background: oklch(0.08 0.02 245) !important;
+}
+
+.mdx-content pre code {
+    background: transparent;
+    color: var(--foreground);
+    padding: 0;
+    font-size: 0.875rem;
+    font-family: var(--font-jetbrains-mono), monospace;
+    line-height: 1.6;
+}
+
+/* Horizontal rule */
+.mdx-content hr {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.72 0.17 175 / 40%), transparent);
+}
+
+/* Tables */
+.mdx-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.mdx-content th,
+.mdx-content td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.mdx-content th {
+    font-weight: 600;
+    color: var(--foreground);
+    background: oklch(0.72 0.17 175 / 10%);
+}
+
+.mdx-content td {
+    color: var(--muted-foreground);
+}
+
+/* Images */
+.mdx-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+}

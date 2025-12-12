@@ -1,0 +1,79 @@
+/* BlogSection Component - BEM Methodology */
+
+/* Block: blog */
+.blog {
+    padding: 4rem 0;
+}
+
+.blog__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.blog__subtitle {
+    color: var(--muted-foreground);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Element: grid */
+.blog__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 640px) {
+    .blog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Element: empty state */
+.blog__empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--muted-foreground);
+}
+
+/* Element: view all link */
+.blog__view-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.blog__view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid oklch(0.72 0.17 175 / 40%);
+    color: oklch(0.72 0.17 175);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.blog__view-all-link:hover {
+    background: oklch(0.72 0.17 175 / 10%);
+    border-color: oklch(0.72 0.17 175);
+}
