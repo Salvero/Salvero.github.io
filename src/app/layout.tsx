@@ -16,24 +16,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Salman | AI & Software Engineer",
+  title: "Salman | Software Engineer",
   description:
-    "Senior AI & Software Engineer building intelligent systems. Specializing in React, Next.js, Python, and Machine Learning.",
+    "Senior Software Engineer building modern web applications. Specializing in React, Next.js, Python, and TypeScript.",
   keywords: [
-    "AI Engineer",
     "Software Engineer",
     "Full-Stack Developer",
     "React",
     "Next.js",
     "Python",
-    "Machine Learning",
     "TypeScript",
+    "Web Development",
   ],
   authors: [{ name: "Salman" }],
   openGraph: {
-    title: "Salman | AI & Software Engineer",
+    title: "Salman | Software Engineer",
     description:
-      "Senior AI & Software Engineer building intelligent systems.",
+      "Senior Software Engineer building modern web applications.",
     type: "website",
   },
 };
