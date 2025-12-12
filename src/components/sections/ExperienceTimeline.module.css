@@ -1,0 +1,289 @@
+/* ExperienceTimeline Component - BEM Methodology */
+
+/* Block: timeline */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Element: header */
+.timeline__header {
+    margin-bottom: 3rem;
+}
+
+.timeline__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.timeline__subtitle {
+    color: var(--muted-foreground);
+    font-size: 1rem;
+}
+
+/* Element: list (semantic list wrapper) */
+.timeline__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Element: track (vertical line) */
+.timeline__track {
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            oklch(0.72 0.17 175 / 30%),
+            var(--border) 20%,
+            var(--border) 80%,
+            oklch(0.72 0.17 175 / 30%));
+}
+
+@media (min-width: 768px) {
+    .timeline__track {
+        left: 2rem;
+    }
+}
+
+/* Element: item (each job entry) */
+.timeline__item {
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+.timeline__item:last-child {
+    padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline__item {
+        padding-left: 5rem;
+    }
+}
+
+/* Element: marker (circular dot on timeline) */
+.timeline__marker {
+    position: absolute;
+    left: 1rem;
+    top: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--background);
+    border: 3px solid var(--border);
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline__marker::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    background: var(--muted-foreground);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .timeline__marker {
+        left: 1.5rem;
+    }
+}
+
+/* Hover state - marker becomes teal accent */
+.timeline__item:hover .timeline__marker {
+    border-color: oklch(0.72 0.17 175);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px oklch(0.72 0.17 175 / 40%);
+}
+
+.timeline__item:hover .timeline__marker::after {
+    background: oklch(0.72 0.17 175);
+    opacity: 1;
+}
+
+/* Current/active job marker */
+.timeline__marker--current {
+    border-color: oklch(0.72 0.17 175);
+}
+
+.timeline__marker--current::after {
+    background: oklch(0.72 0.17 175);
+    opacity: 1;
+    animation: pulse-marker 2s infinite;
+}
+
+@keyframes pulse-marker {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(0.8);
+    }
+}
+
+/* Element: content (job card) */
+.timeline__content {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline__item:hover .timeline__content {
+    border-color: oklch(0.72 0.17 175 / 30%);
+    transform: translateX(4px);
+    box-shadow: 0 10px 40px oklch(0.72 0.17 175 / 10%);
+}
+
+/* Element: content header */
+.timeline__content-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Element: logo */
+.timeline__logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem;
+    flex-shrink: 0;
+}
+
+.timeline__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Element: info (company, role, dates) */
+.timeline__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline__company {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin: 0 0 0.25rem 0;
+}
+
+.timeline__role {
+    font-size: 0.9375rem;
+    color: oklch(0.72 0.17 175);
+    font-weight: 500;
+    margin: 0 0 0.25rem 0;
+}
+
+.timeline__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    color: var(--muted-foreground);
+}
+
+.timeline__date {
+    font-family: var(--font-jetbrains-mono), monospace;
+}
+
+.timeline__location {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Element: impacts (bullet points) */
+.timeline__impacts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.timeline__impact {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--muted-foreground);
+    line-height: 1.5;
+}
+
+.timeline__impact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.625rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background: oklch(0.72 0.17 175);
+}
+
+/* Element: tech tags */
+.timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.timeline__tag {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    background: var(--muted);
+    color: var(--muted-foreground);
+    transition: all 0.2s ease;
+}
+
+.timeline__item:hover .timeline__tag {
+    background: oklch(0.72 0.17 175 / 15%);
+    color: oklch(0.72 0.17 175);
+}
+
+/* Dark mode adjustments */
+:global(.dark) .timeline__content {
+    background: oklch(0.14 0.025 245 / 60%);
+}
+
+:global(.dark) .timeline__marker {
+    background: oklch(0.12 0.02 245);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .timeline__item:hover .timeline__content,
+    .timeline__item:hover .timeline__marker,
+    .timeline__marker--current::after {
+        animation: none;
+        transform: none;
+    }
+}
